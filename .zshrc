@@ -75,7 +75,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 alias ll='ls -l'
-alias la='la -a'
+alias la='ls -la'
+
+export SVUT=$HOME/.svut
+export PATH=$SVUT:$PATH
 
 # User configuration
 
