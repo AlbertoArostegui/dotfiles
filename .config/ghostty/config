@@ -1,8 +1,9 @@
 #theme
 #background = 302c34
 #foreground = ffffff
-theme = Retro
-background-opacity = 0.96
+#theme = Retro
+theme = niji
+background-opacity = 0.99
 font-family = "Iosevka Nerd Font Mono"
 
 #config
@@ -12,9 +13,9 @@ window-padding-x = 2,2
 macos-titlebar-style = tabs
 
 #shell
+shell-integration = bash
 shell-integration = zsh
 shell-integration-features = no-cursor
 
 #keybinds
-keybind = ctrl+d=new_split:right
 keybind = ctrl+z=close_surface
