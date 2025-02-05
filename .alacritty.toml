@@ -1,0 +1,11 @@
+[window]
+title = "mamweb"
+opacity = 0.99
+decorations = "None"
+
+[font]
+normal = { family = "IosevkaTerm Nerd Font Mono", style = "Regular" }
+
+[mouse]
+hide_when_typing = true
+bindings = [ { mouse = "Right", action = "Paste" } ]
