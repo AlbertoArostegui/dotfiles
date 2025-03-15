@@ -81,32 +81,28 @@ export SVUT=$HOME/.svut
 export PATH=$SVUT:$PATH
 export PATH=$PATH:/Applications/CPLEX_Studio2211/opl/bin/arm64_osx/
 
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
-# User configuration
+#bison
+export CFLAGS="-I/opt/bison/bison-3.7.91/share/include ${CFLAGS}"
+export CXXFLAGS="-I/opt/bison/bison-3.7.91/share/include ${CXXFLAGS}"
+export LDFLAGS="-L/opt/bison/bison-3.7.91/lib ${LDFLAGS}"
+export PATH="/opt/bison/bison-3.7.91/bin:${PATH}"
 
-# export MANPATH="/usr/local/man:$MANPATH"
+#flex
+export CFLAGS="-I/opt/flex/flex-2.6.4/include ${CFLAGS}"
+export CXXFLAGS="-I/opt/flex/flex-2.6.4/include ${CXXFLAGS}"
+export LDFLAGS="-L/opt/flex/flex-2.6.4/lib ${LDFLAGS}"
+export PATH="/opt/flex/flex-2.6.4/bin:${PATH}"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+#SystemC
+export SYSTEMC_HOME="/Users/alberto/systemc"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#Verilator
+export VERILATOR_ROOT="/Users/alberto/verilator"
 
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
+export PATH="$VERILATOR_ROOT/bin:$PATH"
+export VERILATOR_INC_DIR="$VERILATOR_ROOT/include"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="vim ~/.oh-my-zsh"
+#Other
+export PATH="$PATH:/Users/alberto/executables"
