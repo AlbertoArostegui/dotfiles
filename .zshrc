@@ -74,8 +74,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 alias vim=nvim
-alias ll='ls -l'
-alias la='ls -la'
+alias ll='lsd -l'
+alias la='lsd -la'
 
 export SVUT=$HOME/.svut
 export PATH=$SVUT:$PATH
