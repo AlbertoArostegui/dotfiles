@@ -106,3 +106,6 @@ export VERILATOR_INC_DIR="$VERILATOR_ROOT/include"
 
 #Other
 export PATH="$PATH:/Users/alberto/executables"
+
+#Neovim binds
+cat neovim_binds.txt

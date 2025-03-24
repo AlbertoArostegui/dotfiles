@@ -52,7 +52,6 @@ return {
     function _G.toggle_floating_term()
         floating_term:toggle()
     end
-    
         vim.keymap.set('n', "<leader>v", "<cmd>lua _G.toggle_floating_term()<CR>", { desc = "Toggle floating terminal" })
 
   end,
