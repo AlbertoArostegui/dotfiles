@@ -5,8 +5,8 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 --Relative line numbers
-vim.g.number = true
-vim.g.relativenumber = true
+vim.wo.number = true
+vim.wo.relativenumber = true
 
 --Remap to <leader>pf to the explorer
 vim.g.mapleader = " "
