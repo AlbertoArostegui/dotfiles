@@ -1,3 +1,4 @@
+/*
 return {
 	"xiyaowong/transparent.nvim",
 	config = function()
@@ -22,3 +23,4 @@ return {
 		})
 	end,
 }
+*/

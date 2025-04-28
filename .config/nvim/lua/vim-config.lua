@@ -9,7 +9,6 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 --Remap to <leader>pf to the explorer
-vim.g.mapleader = " "
 vim.api.nvim_set_keymap('n', "<leader>pf", ":Ex<CR>", { noremap = true,  silent = true })
 
 --Gui for neovide

@@ -6,6 +6,7 @@ return {
         require('autoclose').setup({
             keys = {
                 ["`"] = { escape = false, close = false}
+                ["'"] = { escape = false, close = false}
             },
             options = {
                 disabled_filetypes = {"text"},
