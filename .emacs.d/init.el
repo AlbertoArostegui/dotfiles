@@ -4,7 +4,7 @@
   (load custom-file))
 
 ;; Real important - Font
-(set-frame-font "Iosevka Nerd Font Mono 14" nil t)
+(set-frame-font "Iosevka Fixed Light 14" nil t)
 
 ;; Melpa
 (require 'package)
@@ -25,6 +25,9 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
+
+(setq scroll-conservatively 10000)
+(setq scroll-margin 1)
 
 ;; Keybindings - Vim motions
 (setq evil-want-C-u-scroll t)
@@ -84,6 +87,7 @@
 (global-set-key (kbd "C-x C-b") 'counsel-switch-buffer)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-s")     'swiper-isearch-thing-at-point)
+(electric-pair-mode t)
 
 (ivy-mode 1)
 (setq ivy-count-format " [%d/%d] "
