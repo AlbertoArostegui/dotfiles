@@ -77,12 +77,6 @@ alias vim=nvim
 alias ll='lsd -l'
 alias la='lsd -la'
 
-export SVUT=$HOME/.svut
-export PATH=$SVUT:$PATH
-export PATH=$PATH:/Applications/CPLEX_Studio2211/opl/bin/arm64_osx/
-
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
-
 #bison
 export CFLAGS="-I/opt/bison/bison-3.7.91/share/include ${CFLAGS}"
 export CXXFLAGS="-I/opt/bison/bison-3.7.91/share/include ${CXXFLAGS}"
@@ -105,7 +99,4 @@ export PATH="$VERILATOR_ROOT/bin:$PATH"
 export VERILATOR_INC_DIR="$VERILATOR_ROOT/include"
 
 #Other
-export PATH="$PATH:/Users/alberto/executables"
-
-#Neovim binds
-cat neovim_binds.txt
+#export PATH="$PATH:/Users/alberto/executables"

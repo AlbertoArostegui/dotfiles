@@ -4,7 +4,7 @@
   (load custom-file))
 
 ;; Real important - Font
-(set-frame-font "Iosevka Nerd Font Mono 14" nil t)
+(set-frame-font "Iosevka Fixed Light 14" nil t)
 
 ;; Melpa
 (require 'package)
@@ -26,11 +26,14 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
+(setq scroll-conservatively 10000)
+(setq scroll-margin 1)
+
 ;; Keybindings - Vim motions
-(setq evil-want-C-u-scroll t)
 (setq evil-want-keybinding 'nil)
 (evil-mode)
 (evil-collection-init)
+
 
 (global-set-key (kbd "C-x C-l") #'toggle-truncate-lines) 
 (global-set-key (kbd "<f5>") #'revert-buffer-quick)
@@ -84,6 +87,8 @@
 (global-set-key (kbd "C-x C-b") 'counsel-switch-buffer)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-s")     'swiper-isearch-thing-at-point)
+(global-set-key (kbd "M-e")     'counsel-rg)
+(electric-pair-mode t)
 
 (ivy-mode 1)
 (setq ivy-count-format " [%d/%d] "
@@ -91,6 +96,7 @@
 
 ;; Programming
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 (global-company-mode)
 
 ;; ediff
