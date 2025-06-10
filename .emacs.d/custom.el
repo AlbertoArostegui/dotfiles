@@ -21,8 +21,8 @@
  '(package-selected-packages
    '(amx cider clojure-mode company counsel diff-hl evil evil-collection
          gruber-darker-theme haskell-mode helpful magit mood-line
-         smooth-scroll smooth-scrolling timu-macos-theme undo-tree
-         vterm vterm-toggle))
+         slime smooth-scroll smooth-scrolling timu-macos-theme
+         undo-tree vterm vterm-toggle))
  '(verilog-auto-lineup 'ignore)
  '(verilog-auto-newline nil)
  '(verilog-case-indent 4)
@@ -38,5 +38,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ansi-color-blue ((t (:background "dodger blue" :foreground "dodger blue"))))
- '(mode-line-active ((t (:inherit mode-line :box (:line-width (2 . 2) :color "gold" :style released-button))))))
+ '(mode-line-active ((t (:inherit mode-line :box (:line-width (1 . 1) :color "gold" :style released-button))))))
 (set-face-attribute 'default nil :height 130)

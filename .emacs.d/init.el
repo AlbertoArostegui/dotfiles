@@ -9,6 +9,7 @@
 ;; Melpa
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
 
 ;; Install packages
 (package-install-selected-packages)
@@ -102,3 +103,13 @@
 ;; ediff
 (setq ediff-window-setup-function #'ediff-setup-windows-plain
       ediff-split-window-function #'split-window-horizontally)
+
+;; Lisp
+(setq inferior-lisp-program "sbcl")
+
+;; Tramp
+(customize-set-variable
+ 'tramp-ssh-controlmaster-options
+ (concat
+   "-o ControlPath=/tmp/ssh-ControlPath-%%r@%%h:%%p "
+   "-o ControlMaster=auto -o ControlPersist=yes"))
