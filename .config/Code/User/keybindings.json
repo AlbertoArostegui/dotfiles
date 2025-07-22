@@ -1,0 +1,14 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "enter",
+        "command": "runCommands",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus",
+        "args": {
+            "commands": [
+                "explorer.openAndPassFocus",
+                "workbench.action.closeSidebar"
+            ]
+        }
+    }
+]

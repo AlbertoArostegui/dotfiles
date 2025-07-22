@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "Tsoding Emacs Gruber Even Darker",
+    "editor.fontFamily": "'Iosevka Fixed'",
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "p", "f"],
+            "commands": [":Ex"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-p>": false,
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "makefile.configureOnOpen": true
+}
