@@ -53,3 +53,4 @@ for i = 1, 9 do
   map('n', "<C-" .. i .. '>', i .. "gt", { desc = "Go to tab " .. i })
 end
 map('n', "<C-0>", ":tablast<CR>", { desc = "Go to last tab" })
+
