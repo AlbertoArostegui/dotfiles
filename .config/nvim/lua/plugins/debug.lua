@@ -48,11 +48,11 @@ return {
     dap.listeners.before.event_terminated["dapui_config"] = function() dapui.close() end
     dap.listeners.before.event_exited["dapui_config"] = function() dapui.close() end
 
-    vim.keymap.set("n", "<F5>", dap.continue)
-    vim.keymap.set("n", "<F10>", dap.step_over)
-    vim.keymap.set("n", "<F11>", dap.step_into)
-    vim.keymap.set("n", "<F12>", dap.step_out)
-    vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
-    vim.keymap.set("n", "<leader>du", dapui.toggle) -- toggle manual de la UI
+    vim.keymap.set("n", "<F5>", dap.continue, { desc = "DAP: Continue" })
+    vim.keymap.set("n", "<F10>", dap.step_over, { desc = "DAP: Step over" })
+    vim.keymap.set("n", "<F11>", dap.step_into, { desc = "DAP: Step into" })
+    vim.keymap.set("n", "<F12>", dap.step_out, { desc = "DAP: Step out" })
+    vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "DAP: Toggle breakpoint" })
+    vim.keymap.set("n", "<leader>du", dapui.toggle, { desc = "DAP: Toggle UI" })
   end,
 }

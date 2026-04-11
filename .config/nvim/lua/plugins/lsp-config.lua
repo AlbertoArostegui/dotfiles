@@ -21,23 +21,22 @@ return {
             "hrsh7th/cmp-nvim-lsp",
         },
         config = function ()
-            local lspconfig = require("lspconfig")
             local mason_lspconfig = require("mason-lspconfig")
             local cmp_nvim_lsp = require("cmp_nvim_lsp") -- <--- Get cmp's LSP capabilities
 
             local on_attach = function(client, bufnr)
                 -- Your existing on_attach keymaps (K, gd, gD, etc.) go here...
                 local opts = { noremap=true, silent=true, buffer=bufnr }
-                vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-                vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-                vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-                vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-                vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-                vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, opts)
-                vim.keymap.set('n', '<leader>v', vim.diagnostic.open_float, opts)
-                vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-                vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+                vim.keymap.set('n', 'K', vim.lsp.buf.hover, vim.tbl_extend('force', opts, { desc = 'LSP: Hover documentation' }))
+                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, vim.tbl_extend('force', opts, { desc = 'LSP: Go to definition' }))
+                vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, vim.tbl_extend('force', opts, { desc = 'LSP: Go to declaration' }))
+                vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, vim.tbl_extend('force', opts, { desc = 'LSP: Go to implementation' }))
+                vim.keymap.set('n', 'gr', vim.lsp.buf.references, vim.tbl_extend('force', opts, { desc = 'LSP: List references' }))
+                vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, vim.tbl_extend('force', opts, { desc = 'LSP: Rename symbol' }))
+                vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, vim.tbl_extend('force', opts, { desc = 'LSP: Code actions' }))
+                vim.keymap.set('n', '<leader>v', vim.diagnostic.open_float, vim.tbl_extend('force', opts, { desc = 'LSP: Line diagnostics' }))
+                vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, vim.tbl_extend('force', opts, { desc = 'LSP: Previous diagnostic' }))
+                vim.keymap.set('n', ']d', vim.diagnostic.goto_next, vim.tbl_extend('force', opts, { desc = 'LSP: Next diagnostic' }))
 
                 -- Add other on_attach logic if needed
             end
@@ -51,12 +50,13 @@ return {
             local servers = mason_lspconfig.get_installed_servers()
 
             for _, server_name in ipairs(servers) do
-                lspconfig[server_name].setup {
+                vim.lsp.config(server_name, {
                     on_attach = on_attach,
                     -- *** Pass the capabilities to the server setup ***
                     capabilities = capabilities,
                     -- settings = { ... } -- Server specific settings if needed
-                }
+                })
+                vim.lsp.enable(server_name)
             end
         end
     }
