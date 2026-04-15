@@ -1,0 +1,15 @@
+# --- ACADEMIA Y ARQUITECTURA ---
+https://export.arxiv.org/rss/cs.AR "~ArXiv: Computer Architecture" paper tfm
+https://export.arxiv.org/rss/cs.DC "~ArXiv: Distributed/Concurrent" paper tfm
+
+# --- INGENIERÍA Y HFT ---
+https://blog.cloudflare.com/rss/ "~Cloudflare Engineering" tech system
+https://isocpp.org/blog/rss "~ISO C++ Standard" dev cpp
+https://engineering.tradestation.com/feed "~TradeStation Blog" hft
+
+# --- ENTRETENIMIENTO TÉCNICO (YOUTUBE) ---
+https://www.youtube.com/feeds/videos.xml?channel_id=UCO1cgjhGzsSYb1rsB4bFe4Q "~Low Level Learning" youtube hardware
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw "~CppCon" youtube cpp
+
+# --- FOROS ---
+https://www.reddit.com/r/cpp/top/.rss?t=week "~Reddit: C++ Top Semanal" reddit cpp

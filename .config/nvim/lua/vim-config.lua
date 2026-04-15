@@ -32,3 +32,20 @@ for i = 1, 9 do
 end
 map('n', "<C-0>", ":tablast<CR>", { desc = "Go to last tab" })
 
+-- Para los snippets
+local ls = require("luasnip")
+
+vim.keymap.set({"i", "s"}, "<Tab>", function()
+    if ls.expand_or_jumpable() then
+        ls.expand_or_jump()
+    else
+        -- Si no hay snippet, que haga un Tab normal
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+    end
+end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<S-Tab>", function()
+    if ls.jumpable(-1) then
+        ls.jump(-1)
+    end
+end, {silent = true})

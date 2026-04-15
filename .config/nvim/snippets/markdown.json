@@ -1,0 +1,22 @@
+{
+  "Snapshot Financiero": {
+    "prefix": "!finanzas",
+    "body": [
+      "# SNAPSHOT FINANCIERO | $1",
+      "",
+      "## 💰 BALANCE GENERAL",
+      "- **Patrimonio Total:** $2 €",
+      "- **Liquidez (Cuenta):** $3 €",
+      "- **Ahorro este mes:** $4 €",
+      "",
+      "## 📈 INVERSIONES",
+      "- **Acciones:** $5",
+      "- **Crypto:** $6",
+      "- **Rendimiento Mensual:** $7 %",
+      "",
+      "## 📝 COMENTARIO",
+      "$0"
+    ],
+    "description": "Vomita la plantilla financiera"
+  }
+}

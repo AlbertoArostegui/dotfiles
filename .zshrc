@@ -73,7 +73,6 @@ ZSH_THEME="gozilla"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-alias vim=nvim
 alias ll='lsd -l'
 alias la='lsd -la'
 
@@ -100,3 +99,13 @@ export VERILATOR_INC_DIR="$VERILATOR_ROOT/include"
 
 #Other
 #export PATH="$PATH:/Users/alberto/executables"
+#export $RISCV=/opt/riscv
+
+# Added by Antigravity
+export PATH="/Users/alberto/.antigravity/antigravity/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+# opencode
+export PATH=/Users/alberto/.opencode/bin:$PATH
+alias vim=nvim
