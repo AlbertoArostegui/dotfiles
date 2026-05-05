@@ -1,3 +1,5 @@
 .emacs.d/elpa
+.emacs.d/eln-cache
 .emacs.d/undo-tree-files
 .emacs.d/backups
+.ssh/id_*
