@@ -157,7 +157,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+space exec $menu
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -228,3 +228,7 @@ include /etc/sway/config.d/*
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec mako
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+for_window [app_id="pavucontrol"] floating enable
+for_window [class="Steam" title="Friends List"] floating enable
+for_window [class="Steam" title="Steam - News"] floating enable

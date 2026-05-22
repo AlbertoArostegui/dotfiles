@@ -4,7 +4,7 @@ vim.opt.secure = true
 require("config.lazy")
 require("vim-config")
 vim.opt.termguicolors = true
---vim.cmd("colorscheme GruberDarker")
+vim.cmd("colorscheme GruberDarker")
 -- Autocargar plantilla del diario si el archivo es nuevo
 vim.api.nvim_create_autocmd("BufNewFile", {
     pattern = "*/diario/*/*.md",
